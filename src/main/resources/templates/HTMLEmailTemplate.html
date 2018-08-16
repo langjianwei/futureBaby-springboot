@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Title</title>
+        <style type="text/css">
+            body{
+                font-size: 10pt;
+            }
+            .header,.content,.footer{
+                width: 600px;
+                height: 180px;
+            }
+            .footer{
+                text-align: right;
+            }
+            #name{
+                color: grey;
+            }
+            #message{
+                color: black;
+                padding-left:50px;
+                font-size:20px; 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            您好，dear:<br/><br/>
+            <div id="message">
+                <span>    </span>
+                <span id="message">
+                	<p th:text="${emailContext}"></p>
+                </span>
+            </div>
+            <div class="footer">
+                郎建伟---技术部
+            </div>
+        </div>
+
+    </body>
+</html>

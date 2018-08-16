@@ -1,0 +1,36 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate.ddl-auto: update
+  database:
+    driverClassName: org.postgresql.Driver
+  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/crawler
+    username: postgres
+    password: 123123
+  # 热部署生效
+  devtools:
+    restart:
+      enabled: true
+      # 重启的目录,添加那个目录下的文件需要重启
+      additional-paths: src/main/java
+      
+  mail:
+    host: smtp.163.com
+    username: 17600604700@163.com
+    password: ljw00000000
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+
+# 关闭缓存，即时刷新，生产环境需改为true
+#spring.freemarker.cache=false
+#spring.thymeleaf.cache=false
+
